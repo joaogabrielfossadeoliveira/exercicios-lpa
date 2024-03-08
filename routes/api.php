@@ -56,3 +56,9 @@ Route::get('wyll',function(Request $request){
     $resultado = $primeironumero / $segundonumero;
     return $resultado;
 });
+Route::get('professor',function(Request $request){
+    $primeironumero = $request->input('primeironumero');
+    $segundonumero = $request->input('segundonumero');
+    $resultado = $primeironumero * $segundonumero;
+    return $resultado;
+});
