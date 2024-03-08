@@ -99,3 +99,10 @@ Route::get('mouse',function(Request $request){
     $resultado  = $valororiginal - ($porcentagem * $desconto);
     return ' o valor do produto é ' . $valororiginal . ' com o desconto de ' . $desconto . ' o valor atual e de ' . $resultado;
 });
+Route::get('not',function(Request $request){
+    $salarioantigo = $request->input('salarioantigo');
+    $aumento = $request->input('aumento');
+    $porcentagem = $salarioantigo / 100;
+    $resultado  = $salarioantigo + ($porcentagem * $aumento);
+    return $resultado;
+});
