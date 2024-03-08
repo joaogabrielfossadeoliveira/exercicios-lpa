@@ -73,3 +73,9 @@ Route::get('senior',function(Request $request){
      return $resultado;
 
 });
+Route::get('green',function(Request $request){
+    $segundonumero = $request->input('primeironumero');
+    $primeironumero = $request->input('segundonumero');
+    $resultado = $segundonumero / $primeironumero;
+    return $resultado;
+});
