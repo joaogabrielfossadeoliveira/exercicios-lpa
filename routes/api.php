@@ -118,3 +118,11 @@ Route::get('nvidia',function(Request $request){
     $resultado  = $preçoproduto + ($porcentagem * $comissão);
     return $resultado;
 });
+Route::get('dell', function (request $request) {
+$dia = $request->input('dia');
+ $hora = $dia * 24;
+ $minutos = $hora * 60;
+ $segundos = $minutos * 60;
+$resultado = "dias: " . $dia . ", horas: " . $hora . ", minutos: " . $minutos . ", segundos: " . $segundos;
+return $resultado;
+});
