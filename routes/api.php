@@ -50,3 +50,9 @@ Route::get('eduardo',function(Request $request){
     return $resultado;
 
 });
+Route::get('wyll',function(Request $request){
+    $primeironumero = $request->input('primeironumero');
+    $segundonumero = $request->input('segundonumero');
+    $resultado = $primeironumero / $segundonumero;
+    return $resultado;
+});
