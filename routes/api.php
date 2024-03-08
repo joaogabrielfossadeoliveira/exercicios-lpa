@@ -79,3 +79,9 @@ Route::get('green',function(Request $request){
     $resultado = $segundonumero / $primeironumero;
     return $resultado;
 });
+Route::get('java',function(Request $request){
+    $primeironumero = $request->input('primeironumero');
+    $resultado = $primeironumero * '2';
+    return ' O dobro do ' . $primeironumero . ' é igual a ' . $resultado ;
+
+});
