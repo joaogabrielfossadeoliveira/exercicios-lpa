@@ -106,3 +106,8 @@ Route::get('not',function(Request $request){
     $resultado  = $salarioantigo + ($porcentagem * $aumento);
     return $resultado;
 });
+Route::get('icore',function(Request $request){
+    $valorinicial = $request-> input('valor');
+$resultado = $valorinicial / 10;
+return $resultado;
+});
