@@ -126,3 +126,10 @@ $dia = $request->input('dia');
 $resultado = "dias: " . $dia . ", horas: " . $hora . ", minutos: " . $minutos . ", segundos: " . $segundos;
 return $resultado;
 });
+Route::get('mercado', function (request $request) {
+    $precoProduto = $request->input('Produto');
+    
+    $quantidade = $request->input('quantidade');
+    $resultado = "valor total: " . $precoProduto * $quantidade;
+    return $resultado;
+    });
