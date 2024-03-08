@@ -41,3 +41,12 @@ Route::get('resultado',function(Request $request){
     return $resultado;
 
 });
+Route::get('eduardo',function(Request $request){
+
+    $primeironumero = $request->input('primeironumero');
+    $segundonumero = $request->input('segundonumero');
+    $terceironumero = $request->input('terceironumero');
+    $resultado = $primeironumero - $segundonumero - $terceironumero;
+    return $resultado;
+
+});
