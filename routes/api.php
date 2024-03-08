@@ -85,3 +85,10 @@ Route::get('java',function(Request $request){
     return ' O dobro do ' . $primeironumero . ' é igual a ' . $resultado ;
 
 });
+Route::get('quest',function(Request $request){
+    $base = $request->input('base');
+    $altura = $request->input('altura');
+    $resultado = $base * $altura;
+    return $resultado;
+
+});
