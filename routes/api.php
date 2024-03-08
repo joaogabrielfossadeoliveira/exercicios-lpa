@@ -30,3 +30,14 @@ Route::get('cidade',function(Request $request){
  return 'Meu nome é ' . $nome . ' nasci no ano de ' . $data . ' na cidade de ' . $city ;
     
 });
+Route::get('resultado',function(Request $request){
+
+    $primeironumero = $request->input('primeironumero');
+
+    $segundonumero = $request->input('segundonumero');
+    
+    $resultado = $primeironumero + $segundonumero;
+
+    return $resultado;
+
+});
