@@ -16,7 +16,7 @@ Route::get('nome/idade',function(Request $request){
 
     $idade = $request->input('idade'); 
 
-    return ' Meu nome é ' . $nome . ' tenho ' .$idade.' anos de idade ';
+    return ' Meu nome é ' . $nome . ' tenho ' . $idade .' anos de idade ';
 
 }); 
 Route::get('cidade',function(Request $request){
@@ -127,9 +127,9 @@ $resultado = "dias: " . $dia . ", horas: " . $hora . ", minutos: " . $minutos . 
 return $resultado;
 });
 Route::get('mercado', function (request $request) {
-    $precoProduto = $request->input('Produto');
-    
+        $precoProduto = $request->input('Produto');
     $quantidade = $request->input('quantidade');
     $resultado = "valor total: " . $precoProduto * $quantidade;
     return $resultado;
     });
+    
