@@ -17,7 +17,7 @@ Certifique-se de ter os seguintes requisitos atendidos antes de começar a traba
 
 1. Clone este repositório para seu ambiente de desenvolvimento local utilizando o comando: 
 ```
-ˋˋˋ Git clone Link repositório https://github.com/joaogabrielfossadeoliveira/exercicios-lpa.git
+ˋˋˋ Git clone https://github.com/joaogabrielfossadeoliveira/exercicios-lpa.git
 ```
 2. Acesse o diretório do projeto:
 
