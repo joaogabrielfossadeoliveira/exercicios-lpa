@@ -28,14 +28,15 @@ Certifique-se de ter os seguintes requisitos atendidos antes de começar a traba
 ```
 ˋˋˋ composer update
 ```
-4. Iniciando o servidor
-```
-ˋˋˋ php artisan serve --port=80
-```
-5. Acesse o Visual Studio Code
+4. Acesse o Visual Studio Code
 ```
 ˋˋˋ code .
 ```
+5. Iniciando o servidor
+```
+ˋˋˋ php artisan serve --port=80
+```
+
 6. Importar o arquivo do Insomnia o do Insomnia
  ## licença 
  Este projeto esta licenciado sob a [MIT License] (LICENSE), o que significa que voce pode utiliza-lo livremente para fins educacionais, comerciais ou pessoais.
