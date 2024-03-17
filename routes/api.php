@@ -132,4 +132,16 @@ Route::get('mercado', function (request $request) {
     $resultado = "valor total: " . $precoProduto * $quantidade;
     return $resultado;
     });
+route::get('exemplo/condicao', function (Request $request) {
+        $Idade = $request->input('idade');
+        $retorno = "";
+        if($Idade >= 18){
+        $retorno = "Maior de idade";
+        }
+        else{
+            $retorno = "Menor de idade";
+        }
+        return $retorno;
+    
+        }); 
     
