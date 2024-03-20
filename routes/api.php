@@ -144,4 +144,75 @@ route::get('exemplo/condicao', function (Request $request) {
         return $retorno;
     
         }); 
+Route::get('verifica/idade', function (Request $request){
+$idade = $request->input('idade');
+if($idade > 18){
+return "maior de idade";
+} else {
+return " menor de idade";
+}
+});
+
+Route::get('VERIFICAR',function (Request $request){
+    $numero = $request-> input('numero');
+    if ($numero % 2 ==0){
+        return 'par';;
+    } else {
+        return 'impar';
+    }
+});
+Route::get('exercicio1',function (Request $request){
+ $numero = $request->input('numero');
+  if ($numero > 10){
+    return " seu numero e maior que 10 ";
+  } else {
+    return " seu numero e menor que 10";
+  }
+});
+Route::get('exercicio2',function (Request $request){
+    $numero = $request->input('numero');
+    if ($numero > 30){
+      return " esta quente";
+    } else {
+      return " esta um bom clima ";
+    } 
+});
+Route::get('exercicio3', function (Request $request){
+    $numero = $request->input('numero');
+    if ($numero > 0){
+      return " seu numero é positivo ";
+      }
+     if ($numero < 0){
+      return " seu numero é negativo";
+     }
+     if ($numero = 0){
+      return "seu numero e igual a zero";        
+      }
+    
+   
+});
+Route::get('exercicios4', function (Request $request){
+    $numero1 = $request->input('numero1');
+    $numero2 = $request->input('numero2');
+    if ($numero1 > $numero2){
+    return $numero1;
+} else { 
+        return $numero2;
+    }
+
+});
+Route::get('exercicio5', function (Request $requst){
+    $numero = $requst->input('numero');
+    if ($numero % 3 ==0)
+    {
+        return 'é divisivel';;
+    } else {
+        return 'Não é divisivel';
+    }
+
+
+});
+    
+
+
     
