@@ -146,7 +146,7 @@ route::get('exemplo/condicao', function (Request $request) {
         }); 
 Route::get('verifica/idade', function (Request $request){
 $idade = $request->input('idade');
-if($idade > 18){
+if($idade >= 18){
 return "maior de idade";
 } else {
 return " menor de idade";
@@ -171,13 +171,21 @@ Route::get('exercicio1',function (Request $request){
 });
 Route::get('exercicio2',function (Request $request){
     $numero = $request->input('numero');
-    if ($numero > 30){
+    if ($numero >= 30){
       return " esta quente";
     } else {
       return " esta um bom clima ";
     } 
-});
+});     
 Route::get('exercicio3', function (Request $request){
+    $idade = $request->input('idade');
+    if($idade >= 18){
+    return "maior de idade";
+    } else {
+    return " menor de idade";
+    }
+    });
+Route::get('exercicio4', function (Request $request){
     $numero = $request->input('numero');
     if ($numero > 0){
       return " seu numero é positivo ";
@@ -191,7 +199,7 @@ Route::get('exercicio3', function (Request $request){
     
    
 });
-Route::get('exercicios4', function (Request $request){
+Route::get('exercicios5', function (Request $request){
     $numero1 = $request->input('numero1');
     $numero2 = $request->input('numero2');
     if ($numero1 > $numero2){
@@ -201,7 +209,7 @@ Route::get('exercicios4', function (Request $request){
     }
 
 });
-Route::get('exercicio5', function (Request $requst){
+Route::get('exercicio6', function (Request $requst){
     $numero = $requst->input('numero');
     if ($numero % 3 ==0)
     {
@@ -212,7 +220,7 @@ Route::get('exercicio5', function (Request $requst){
 
 
 });
-Route::get('exercicio6', function (Request $requst){
+Route::get('exercicio7', function (Request $requst){
     $numero = $requst->input('numero');
     if ($numero % 9 ==0)
     {
@@ -223,7 +231,7 @@ Route::get('exercicio6', function (Request $requst){
 
 
 });
-Route::get('exercicio7', function (Request $requst){
+Route::get('exercicio8', function (Request $requst){
     $numero = $requst->input('numero');
     if ($numero % 7 ==0)
     {
@@ -235,7 +243,7 @@ Route::get('exercicio7', function (Request $requst){
 
 });
 
-Route::get('exercicio8',function (Request $request){
+Route::get('exercicio9',function (Request $request){
     $numero = $request->input('numero');
     if ($numero >= 12){
       return " Você não é uma criança";
@@ -243,17 +251,17 @@ Route::get('exercicio8',function (Request $request){
       return " Voçê ainda é uma criança ";
     } 
 });
-Route::get('exercicio9',function (Request $request){
-    $numero = $request-> input('numero');
+Route::get('exercicio10',function (Request $request){
+    $numero = $request->input('numero');
     if($numero % 2 != 0 ){  
         if($numero > 0){
-return "Sim o numero e positivo e ímapar";
+return "Sim o numero e positivo e ímpar";
         } else {
 return " o numero é negativo e par";
         }
     } 
 });
-Route::get('exercicio10', function (Request $request){
+Route::get('exercicio11', function (Request $request){
     $numero = $request->input('numero');
     if ($numero > 100){
       return " seu numero é maior que 100 ";
@@ -267,7 +275,7 @@ Route::get('exercicio10', function (Request $request){
     
    
 });
-Route::get('exercicio11', function (Request $requst){
+Route::get('exercicio12', function (Request $requst){
     $numero = $requst->input('numero');
     if ($numero % 6 ==0)
     {
@@ -278,7 +286,7 @@ Route::get('exercicio11', function (Request $requst){
 
 
 });
-Route::get('exercicio12', function(Request $request){ 
+Route::get('exercicio13', function(Request $request){ 
 $nome = $request -> input('name'); 
 if ($nome == "Alice" ){
     return 'olá, Alice!';
@@ -286,7 +294,7 @@ if ($nome == "Alice" ){
     return 'olá, nome não e Alice';
 }
 }); 
-Route::get('exercicio13', function (Request $request){
+Route::get('exercicio14', function (Request $request){
     $idade = $request-> input('idade');
     $possuicarteriademotorista = $request->input('possuicarteriademotorista');
     if($idade >= 18 ){  
@@ -298,7 +306,7 @@ return " Até pode ser maior de idade mais nao possui carteira de motorista, ou 
     } 
     
     });
-    Route::get('exercicio14', function (Request $request){
+    Route::get('exercicio15', function (Request $request){
         $numero1 = $request->input('numero1');
         $numero2 = $request->input('numero2');
         if ($numero1 < $numero2){
@@ -308,14 +316,14 @@ return " Até pode ser maior de idade mais nao possui carteira de motorista, ou 
         }
     
     });
-    Route::get('exercicio15', function (Request $request){
+    Route::get('exercicio16', function (Request $request){
         $idade = $request->input('idade');
         $nome = $request->input('nome');
         if ($idade >= 18){
         return "Você é maior de idade, $nome ";
         } 
         });
-        Route::get('exercicio16',function(Request $request){
+        Route::get('exercicio17',function(Request $request){
             $segundonumero = $request->input('primeironumero');
             $primeironumero = $request->input('segundonumero');  
             $resultado = $primeironumero / $segundonumero ;
@@ -323,7 +331,7 @@ return " Até pode ser maior de idade mais nao possui carteira de motorista, ou 
 
             return $resultado;
         });
-        Route::get('exercicio17',function(Request $request){
+        Route::get('exercicio18',function(Request $request){
             $primeironumero = $request->input('primeironumero');
             $segundonumero = $request->input('segundonumero');  
             if ($primeironumero == 0){
@@ -333,7 +341,7 @@ return " Até pode ser maior de idade mais nao possui carteira de motorista, ou 
                     return "O segundo numero é igual a zero";
                 } return $primeironumero / $segundonumero;
             });
-            Route::get('exercicio18',function(Request $request){
+            Route::get('exercicio19',function(Request $request){
                 $segundonumero = $request->input('primeironumero');
                 $primeironumero = $request->input('segundonumero');  
                 $resultado = $primeironumero * $segundonumero ;
@@ -346,7 +354,7 @@ return " Até pode ser maior de idade mais nao possui carteira de motorista, ou 
     
                 
             });
-            Route::get('exercicio19',function(Request $request){
+            Route::get('exercicio20',function(Request $request){
                 $primeironumero = $request->input('primeironumero');
                 $segundonumero = $request->input('segundonumero');  
                 $resultado = $primeironumero + $segundonumero ;
