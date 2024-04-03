@@ -392,5 +392,5 @@ Route::get('lista4', function (Request $request) {
     $peso = $request->input('peso');
     $altura = $request->input('altura');
     $calculo1 = ($altura * $altura) / $altura;
-    if ();
+    if ($altura);
 });
