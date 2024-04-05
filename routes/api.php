@@ -388,9 +388,36 @@ Route::get('lista4', function (Request $request) {
         }
     }
 });
-Route::get('lista4', function (Request $request) {
+Route::get('lista5', function (Request $request) {
     $peso = $request->input('peso');
     $altura = $request->input('altura');
-    $calculo1 = ($altura * $altura) / $altura;
-    if ($altura);
+    $calculo1 = ($altura * $altura) / $peso;
+    if ($calculo1 <= 16,9){
+        return 'Muito abaixo do peso';
+    }
+
+    if ($calculo1 >= 17){
+        if ($calculo1 <= 18,4)
+        return 'Abaixo do peso';
+    }
+if ($calculo1 >= 18,5){
+    if ($calculo1 <= 24,9)
+    return 'Peso normal ';
+}
+if ($calculo1 >= 25){
+    if ($calculo1 <= 29,9)
+    return 'Acima do peso ';
+}
+if ($calculo1 >= 30){
+    if ($calculo1 <= 34,9)
+    return 'Obesidade Grau 1';
+}
+if ($calculo1 >= 35){
+    if ($calculo1 <= 40)
+    return 'Obesidade grau 2'
+}
+if ($calculo1 >= 40){
+    return 'obesidade grau 3'
+}
 });
+
